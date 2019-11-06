@@ -1,11 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
-
-
 import { fetchPosts } from '../actions/postActions';
 import Posts from '../components/Posts';
 import PostForm from '../components/PostForm';
+
 
 class PostsContainer extends React.Component {
 
@@ -14,6 +13,7 @@ class PostsContainer extends React.Component {
     }
 
     render() {
+        
         return (
             <div>
                 <PostForm />
