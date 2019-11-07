@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { fetchPosts } from '../actions/postActions';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types'
+
 
 
 
@@ -26,11 +28,17 @@ class Posts extends Component {
         
         return (
             <div>
-                <h1>Posts</h1>
+                <h1 className='ui relaxed divided list'>Posts</h1>
                 {postItems}
             </div>
         )
     }
+}
+
+Posts.propTypes = {
+    fetchPosts: PropTypes.func.isRequired,
+    posts: PropTypes.array.isRequired,
+    newPost: PropTypes.object
 }
 
 const mapStateToProps = state => ({
