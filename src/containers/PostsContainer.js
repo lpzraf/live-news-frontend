@@ -1,16 +1,16 @@
 import React from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
-import { fetchPosts } from '../actions/postActions';
+// import { fetchPosts } from '../actions/postActions';
 import Posts from '../components/Posts';
 import PostForm from '../components/PostForm';
 
 
-class PostsContainer extends React.Component {
+export default class PostsContainer extends React.Component {
 
-    componentDidMount() {
-        this.props.fetchPosts()
-    }
+    // componentDidMount() {
+    //     this.props.fetchPosts()
+    // }
 
     render() {
         
@@ -29,9 +29,12 @@ Posts.propTypes = {
     newPost: PropTypes.object
 }
 
-const mapStateToProps = state => ({
-    posts: state.posts.items,
-    newPost: state.posts.item
-})
+// const mapStateToProps = state => ({
+//     posts: state.items,
+//     newPost: state.item
+// })
 
-export default connect(mapStateToProps, { fetchPosts })(PostsContainer)
+// export default connect(mapStateToProps, { fetchPosts })(PostsContainer)
+
+
+
