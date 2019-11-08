@@ -4,6 +4,8 @@ import React from 'react';
 // import { fetchPosts } from '../actions/postActions';
 import Posts from '../components/Posts';
 import PostForm from '../components/PostForm';
+import {Route, Switch} from 'react-router-dom'
+
 
 
 export default class PostsContainer extends React.Component {
@@ -16,10 +18,13 @@ export default class PostsContainer extends React.Component {
         
         return (
             <div>
+                <Switch>
+                    <Route path='/posts/new' component={PostForm}/>
                 <PostForm />
                 <br />
                 <br />
                 <Posts />
+                </Switch>
             </div>
         )
     }

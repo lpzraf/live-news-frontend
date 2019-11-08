@@ -27,15 +27,46 @@ class Posts extends Component {
         // check post exist if so map
         
         const postItems = this.props.posts.map(post => (
-            <div key={post.id}>
-            <h2>{post.title}</h2>
-            <p>{post.body}</p>
+            <div className="ui four cards">
+            <div className="green card">
+            
+            <div key={post.id} className="ui card">
+            <div className="content">
+                <i className="right floated like icon"></i>
+                <i className="right floated star icon"></i>
+                <div className="header">{post.title}</div>
+                <div className="description">
+                <p>{post.body}</p>
+                </div>
+            </div>
+            <div className="extra content">
+                <span className="left floated like">
+                <i className="like icon"></i>
+                Like
+                </span>
+                <span className="right floated star">
+                <i className="star icon"></i>
+                Favorite
+                </span>
+            </div>
+            </div>
+
+          
+            </div>
+
             </div>
         ))
+
         
         return (
             <div>
-                <h1 className='ui relaxed divided list'>Posts</h1>
+                <h2 className="ui header">
+                    <i className="pencil alternate icon"></i>
+                <div className="content">
+                    Article Feed
+                    <div className="sub header">Read them all!</div>
+                </div>
+                </h2>
                 {postItems}
             </div>
         )

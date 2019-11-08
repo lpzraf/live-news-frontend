@@ -37,19 +37,19 @@ class Postform extends Component {
             <div>
                 <h1>Add Post</h1>           
                 <form onSubmit={this.onSubmit}>
-                <div class="ui form">
-                    <div class="field">
+                <div className="ui form">
+                    <div className="field">
                             <label>Title</label>
                             <input rows="2" type="text" name="title" onChange={this.onChange} value={this.state.title} />
 
                         </div>
-                    <div class="field">
+                    <div className="field">
                         <label>Body</label>
                         <textarea name="body" onChange={this.onChange} value={this.state.body} />
                     </div>
                 </div>
                 <br />
-                <button type="submit">Submit</button>
+                <button className="ui button" type="submit">Submit</button>
                 </form>
             </div>
         )
