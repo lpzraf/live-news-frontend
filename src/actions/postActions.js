@@ -6,6 +6,8 @@
 
 // }
 
+// im dispatching actions to mb reducer below
+
 import { FETCH_POSTS, NEW_POST } from './types';
 
 export const fetchPosts = () => dispatch => {

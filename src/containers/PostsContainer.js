@@ -6,6 +6,8 @@ import Posts from '../components/Posts';
 import PostForm from '../components/PostForm';
 import {Route, Switch} from 'react-router-dom'
 
+import News from '../components/News';
+
 
 
 export default class PostsContainer extends React.Component {
@@ -19,7 +21,10 @@ export default class PostsContainer extends React.Component {
         return (
             <div>
                 <Switch>
+                <Route path='/news' component={News}/>
+
                     <Route path='/posts/new' component={PostForm}/>
+                    <Route path='/posts' component={Posts}/>
                 <PostForm />
                 <br />
                 <br />
@@ -29,6 +34,8 @@ export default class PostsContainer extends React.Component {
         )
     }
 }
+
+
 
 // Posts.propTypes = {
 //     fetchPosts: PropTypes.func.isRequired,
