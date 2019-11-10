@@ -25,17 +25,12 @@ export default class PostsContainer extends React.Component {
         return (
             <div>
                 <Router>
-                <Nav />
-                <Switch>
-                <Route path='/news' exact component={News}/>
-
-                    <Route path='/posts/new' component={PostForm}/>
-                    <Route path='/posts' component={Posts}/>
-                <PostForm />
-                <br />
-                <br />
-                <Posts />
-                </Switch>
+                    <Nav />
+                    <Switch>
+                        <Route path='/news' exact component={News}/>
+                        <Route path='/posts/new' component={PostForm}/>
+                        <Route path='/posts' component={Posts}/>
+                    </Switch>
                 </Router>
             </div>
         )
