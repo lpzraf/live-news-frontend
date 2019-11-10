@@ -30,6 +30,7 @@ class Postform extends Component {
         };
 
         this.props.createPost(post);
+        this.props.history.push('/posts');
     }
 
     render() {

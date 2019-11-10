@@ -29,7 +29,7 @@ export default class PostsContainer extends React.Component {
                     <Switch>
                         <Route path='/news' exact component={News}/>
                         <Route path='/posts/new' component={PostForm}/>
-                        <Route path='/posts' component={Posts}/>
+                        <Route path='/posts' exact component={Posts}/>
                     </Switch>
                 </Router>
             </div>
