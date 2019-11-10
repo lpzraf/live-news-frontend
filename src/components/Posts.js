@@ -28,17 +28,17 @@ class Posts extends Component {
 
         // check post exist if so map
         
-        const postItems = this.props.posts.map(post => (
-            <div className="ui four cards">
+        const postItems = this.props.posts.map((post, index) => (
+        
             <div className="green card">
             
-            <div key={post.id} className="ui card">
+            <div className="ui card">
             <div className="content">
                 <i className="right floated like icon"></i>
                 <i className="right floated star icon"></i>
-                <div className="header">{post.title}</div>
+                <div key={index}  className="header">{post.title}</div>
                 <div className="description">
-                <p>{post.body}</p>
+                <p key={index}>{post.body}</p>
                 </div>
             </div>
             <div className="extra content">
@@ -52,10 +52,6 @@ class Posts extends Component {
                 </span>
             </div>
             </div>
-
-          
-            </div>
-
             </div>
         ))
 

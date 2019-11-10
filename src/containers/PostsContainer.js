@@ -4,9 +4,11 @@ import React from 'react';
 // import { fetchPosts } from '../actions/postActions';
 import Posts from '../components/Posts';
 import PostForm from '../components/PostForm';
-import {Route, Switch} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 import News from '../components/News';
+import Nav from '../components/Nav';
+import '../App.css'
 
 
 
@@ -22,6 +24,8 @@ export default class PostsContainer extends React.Component {
         
         return (
             <div>
+                <Router>
+                <Nav />
                 <Switch>
                 <Route path='/news' exact component={News}/>
 
@@ -32,6 +36,7 @@ export default class PostsContainer extends React.Component {
                 <br />
                 <Posts />
                 </Switch>
+                </Router>
             </div>
         )
     }

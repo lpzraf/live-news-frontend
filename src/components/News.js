@@ -23,10 +23,11 @@ const News = () => {
 
     return (
         <div>
+            <h1 style={{ textAlign: "center" }}>News</h1>
             {newsArticles.map((article, index) => (    
                 <li 
                     style={{ listStyleType: "none" }} 
-                    key={index}><a href={article.url}>{index}. {article.source.name}: {article.title}</a>
+                    key={index}><a href={article.url}>{index}. {article.title}</a>
                 </li>
             ))}
         </div>
