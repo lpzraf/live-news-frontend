@@ -10,6 +10,8 @@ import News from '../components/News';
 
 
 
+
+
 export default class PostsContainer extends React.Component {
 
     // componentDidMount() {
@@ -21,7 +23,7 @@ export default class PostsContainer extends React.Component {
         return (
             <div>
                 <Switch>
-                <Route path='/news' component={News}/>
+                <Route path='/news' exact component={News}/>
 
                     <Route path='/posts/new' component={PostForm}/>
                     <Route path='/posts' component={Posts}/>

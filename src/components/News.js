@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const News = () => {
@@ -20,8 +21,8 @@ const News = () => {
 
     return (
         <div>
-            {newsArticles.map(article => (
-                <h1>{article.title}</h1>
+            {newsArticles.map((article, index) => (
+               <li key={article.index}><a href={article.url}>{article.title}</a></li>
             ))}
         </div>
     )
