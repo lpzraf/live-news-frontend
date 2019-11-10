@@ -25,33 +25,30 @@ class Posts extends Component {
     
     
     render() {
-
-        // check post exist if so map
         
         const postItems = this.props.posts.map((post, index) => (
         
-            <div className="green card">
-            
-            <div className="ui card">
-            <div className="content">
-                <i className="right floated like icon"></i>
-                <i className="right floated star icon"></i>
-                <div key={index}  className="header">{post.title}</div>
-                <div className="description">
-                <p key={index}>{post.body}</p>
+            <div key={index} className="green card">
+                <div className="ui card">
+                    <div className="content">
+                        <i className="right floated like icon"></i>
+                        <i className="right floated star icon"></i>
+                        <div className="header">{post.title}</div>
+                        <div className="description">
+                        <p>{post.body}</p>
+                        </div>
+                    </div>
+                    <div className="extra content">
+                        <span className="left floated like">
+                        <i className="like icon"></i>
+                        Like
+                        </span>
+                        <span className="right floated star">
+                        <i className="star icon"></i>
+                        Favorite
+                        </span>
+                    </div>
                 </div>
-            </div>
-            <div className="extra content">
-                <span className="left floated like">
-                <i className="like icon"></i>
-                Like
-                </span>
-                <span className="right floated star">
-                <i className="star icon"></i>
-                Favorite
-                </span>
-            </div>
-            </div>
             </div>
         ))
 
