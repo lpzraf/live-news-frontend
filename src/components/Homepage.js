@@ -4,7 +4,9 @@ import React from 'react';
 const Homepage = () => {
     return (
     <div className="background-color">
-        Homepage WIP
+        <div className="homepage-header">
+            <h1>Homepage WIP</h1>
+        </div>
     </div>
     )
 }
