@@ -1,27 +1,28 @@
-// export function postActions() {
-//     fetch('http://localhost:3000/api/v1/posts')
-//     .then(res => res.json())
-//     .then(data => console.log(data))
-
-
-// }
-
-// im dispatching actions to mb reducer below
-
 import { FETCH_POSTS, NEW_POST } from './types';
 
+// NewsAPI
+// export const fetchPosts = () => dispatch => {
+//         fetch('https://jsonplaceholder.typicode.com/posts')
+//         .then(res => res.json())
+//         .then(posts => dispatch({
+//             type: FETCH_POSTS,
+//             payload: posts
+//         }));
+// }
+
+// RailsAPI
 export const fetchPosts = () => dispatch => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(res => res.json())
-        .then(posts => dispatch({
-            type: FETCH_POSTS,
-            payload: posts
-        }));
+    fetch('http://localhost:3000/api/v1/posts')
+    .then(res => res.json())
+    .then(posts => dispatch({
+        type: FETCH_POSTS,
+        payload: posts
+    }));
 }
 
 
 export const createPost = (postData) => dispatch => {
-    fetch('https://jsonplaceholder.typicode.com/posts', {
+    fetch('http://localhost:3000/api/v1/posts', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

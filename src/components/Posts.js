@@ -22,16 +22,17 @@ class Posts extends Component {
         }
       }
     
-      Capitalize(str){
-        return str.charAt(0).toUpperCase() + str.slice(1);
-        }
+    //   Capitalize(str){
+    //     return str.charAt(0).toUpperCase() + str.slice(1);
+    //     }
     
     render() {
         
 
         const postItems = this.props.posts.map((post, index) => (
             <div key={index}>
-                <h2>{index}. {this.Capitalize(post.title)}</h2>
+                <h2>{index}. {post.title}</h2>
+                <h4>- {post.author}</h4>
                 <p>{post.body}</p>
                 <br />
             </div>
@@ -63,11 +64,12 @@ class Posts extends Component {
         
         return (
             <div>
+                <br />
                 <h2 className="ui header">
                     <i className="pencil alternate icon"></i>
                 <div className="content">
-                    Article Feed
-                    <div className="sub header">Read them all!</div>
+                    Blog Feed
+                    <div className="sub header"><a href="/posts/new">Create New Post!</a></div>
                 </div>
                 </h2>
                 {postItems}

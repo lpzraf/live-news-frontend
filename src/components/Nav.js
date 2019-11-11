@@ -6,13 +6,18 @@ const Nav = () => {
 
     return (
         <nav>
-            <h3>Logo</h3>
+            <Link to="/">
+            <p>Home</p>
+            </Link>
             <ul className="nav-links">
                 <Link to="/news">
                 <li>News</li>
                 </Link>
                 <Link to="/posts">
                 <li>Blog</li>
+                </Link>
+                <Link to="/posts/new">
+                <i class="edit icon"></i>
                 </Link>
             </ul>
         </nav>

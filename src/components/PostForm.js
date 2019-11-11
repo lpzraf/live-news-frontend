@@ -10,7 +10,8 @@ class Postform extends Component {
         super(props);
         this.state = {
             title: "",
-            body: ""
+            body: "",
+            author: ""
         };
 
         this.onChange = this.onChange.bind(this);
@@ -26,7 +27,8 @@ class Postform extends Component {
 
         const post = {
             title: this.state.title,
-            body: this.state.body
+            body: this.state.body,
+            author: this.state.author
         };
 
         this.props.createPost(post);
@@ -39,11 +41,15 @@ class Postform extends Component {
                 <h1>Add Post</h1>           
                 <form onSubmit={this.onSubmit}>
                 <div className="ui form">
+                <div className="field">
+                            <label>Author</label>
+                            <input rows="2" type="text" name="author" onChange={this.onChange} value={this.state.author} />
+                    </div>
+                    
                     <div className="field">
                             <label>Title</label>
                             <input rows="2" type="text" name="title" onChange={this.onChange} value={this.state.title} />
-
-                        </div>
+                    </div>
                     <div className="field">
                         <label>Body</label>
                         <textarea name="body" onChange={this.onChange} value={this.state.body} />

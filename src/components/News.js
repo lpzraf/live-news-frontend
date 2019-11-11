@@ -22,6 +22,7 @@ const News = () => {
 
     return (
         <div>
+            <br />
             <h1 style={{ textAlign: "center" }}>News</h1>
             {newsArticles.map((article, index) => (    
                 <li 
