@@ -23,7 +23,13 @@ const News = () => {
     return (
         <div>
             <br />
-            <h1 style={{ textAlign: "center" }}>News</h1>
+            <h2 className="ui header">
+            <i class="newspaper outline icon"></i>
+                <div className="content">
+                    News
+                    <div className="sub header">Live stories from many top sources.</div>
+                </div>
+                </h2> 
             {newsArticles.map((article, index) => (    
                 <li 
                     style={{ listStyleType: "none" }} 

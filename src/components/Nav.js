@@ -17,7 +17,7 @@ const Nav = () => {
                 <li>Blog</li>
                 </Link>
                 <Link to="/posts/new">
-                <i class="edit icon"></i>
+                <i className="edit icon"></i>
                 </Link>
             </ul>
         </nav>

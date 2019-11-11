@@ -38,7 +38,16 @@ class Postform extends Component {
     render() {
         return (
             <div>
-                <h1>Add Post</h1>           
+                <br />
+
+                <h2 className="ui header">
+                <i class="edit icon"></i>
+                <div className="content">
+                    Feeling creative?
+                    <div className="sub header">Add a new post!</div>
+                </div>
+                </h2> 
+                <br />          
                 <form onSubmit={this.onSubmit}>
                 <div className="ui form">
                 <div className="field">
