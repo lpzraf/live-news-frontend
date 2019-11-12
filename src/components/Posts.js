@@ -30,35 +30,29 @@ class Posts extends Component {
         
 
         const postItems = this.props.posts.map((post, index) => (
-            <div key={index}>
-                <h2>{index}. {post.title}</h2>
-                <h4>- {post.author}</h4>
+            // <div key={index}>
+            //     <h2>{index}. {post.title}</h2>
+            //     <h4>- {post.author}</h4>
+            //     <p>{post.body}</p>
+            //     <br />
+            // </div>
+
+            <div class="ui three stackable cards">
+            <div key={index} className="ui card">
+            <div class="content">
+                <div className="header">{post.title}</div>
+                <div className="meta"> {post.author}</div>
+                <div className="description">
                 <p>{post.body}</p>
-                <br />
+                </div>
+            </div>
+            <div className="extra content">
+                <i className="check icon"></i>
+                121 Votes
+            </div>
+            </div>
             </div>
         
-            // <div key={index} className="green card">
-            //     <div className="ui card">
-            //         <div className="content">
-            //             <i className="right floated like icon"></i>
-            //             <i className="right floated star icon"></i>
-            //             <div className="header">{post.title}</div>
-            //             <div className="description">
-            //             <p>{post.body}</p>
-            //             </div>
-            //         </div>
-            //         <div className="extra content">
-            //             <span className="left floated like">
-            //             <i className="like icon"></i>
-            //             Like
-            //             </span>
-            //             <span className="right floated star">
-            //             <i className="star icon"></i>
-            //             Favorite
-            //             </span>
-            //         </div>
-            //     </div>
-            // </div>
         ))
 
         
