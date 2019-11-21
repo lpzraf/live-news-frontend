@@ -11,7 +11,7 @@ class Postform extends Component {
         this.state = {
             title: "",
             body: "",
-            author: ""
+            author: ""        
         };
 
         this.onChange = this.onChange.bind(this);
@@ -41,7 +41,7 @@ class Postform extends Component {
                 <br />
 
                 <h2 className="ui header">
-                <i class="edit icon"></i>
+                <i className="edit icon"></i>
                 <div className="content">
                     Feeling creative?
                     <div className="sub header">Add a new post!</div>

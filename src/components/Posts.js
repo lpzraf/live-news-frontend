@@ -6,6 +6,10 @@ import PropTypes from 'prop-types';
 
 // export default class Posts extends Component {
 class Posts extends Component {
+
+    state= {
+        points: 0
+    }
     
     
     componentDidMount() {
@@ -21,6 +25,11 @@ class Posts extends Component {
     //   Capitalize(str){
     //     return str.charAt(0).toUpperCase() + str.slice(1);
     //     }
+
+    handleClick = (e) => {
+        e.preventDefault();
+        this.setState({points: this.state.points + 1})
+      }
     
     render() {
         
@@ -33,20 +42,21 @@ class Posts extends Component {
             //     <br />
             // </div>
 
-            <div class="ui three stackable cards">
-            <div key={index} className="ui card">
-            <div class="content">
-                <div className="header">{post.title}</div>
-                <div className="meta"> {post.author}</div>
-                <div className="description">
-                <p>{post.body}</p>
+            <div key={index} className="ui three stackable cards">
+                <div className="ui card">
+                    <div className="content">
+                        <div className="header">{post.title}</div>
+                        <div className="meta"> {post.author}</div>
+                        <div className="description">
+                        <p>{post.body}</p>
+                        </div>
+                    </div>
+                    <div className="extra content">
+                        <i className="check icon"></i>
+                        {this.state.points} Votes
+                    </div>
+                    <button className="ui button" type="submit" onClick={this.handleClick}>Add Point</button>
                 </div>
-            </div>
-            <div className="extra content">
-                <i className="check icon"></i>
-                121 Votes
-            </div>
-            </div>
             </div>
         
         ))
