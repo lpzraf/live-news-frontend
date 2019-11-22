@@ -23,7 +23,7 @@ export default class PostsContainer extends React.Component {
 
     render() {
         
-        return (
+       return (
             <div>
                 <Router>
                     <Nav />

@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 class Posts extends Component {
 
     state= {
-        points: 0
+        votes: {}
     }
     
     
@@ -21,28 +21,19 @@ class Posts extends Component {
           this.props.posts.unshift(nextProps.newPost);
         }
       }
-    
-    //   Capitalize(str){
-    //     return str.charAt(0).toUpperCase() + str.slice(1);
-    //     }
 
-    handleClick = (e) => {
-        e.preventDefault();
-        this.setState({points: this.state.points + 1})
-      }
+    handleClick = (id) => () => {
+        this.setState((prevState) => ({ 
+           [id]: prevState[id] ? prevState[id] + 1 : 1, 
+        }));
+    }
     
     render() {
         
 
         const postItems = this.props.posts.map((post, index) => (
-            // <div key={index}>
-            //     <h2>{index}. {post.title}</h2>
-            //     <h4>- {post.author}</h4>
-            //     <p>{post.body}</p>
-            //     <br />
-            // </div>
 
-            <div key={index} className="ui three stackable cards">
+            <div key={post.id} className="ui three stackable cards">
                 <div className="ui card">
                     <div className="content">
                         <div className="header">{post.title}</div>
@@ -53,9 +44,11 @@ class Posts extends Component {
                     </div>
                     <div className="extra content">
                         <i className="check icon"></i>
-                        {this.state.points} Votes
+                        {this.state[post.id] || 0} Votes
                     </div>
-                    <button className="ui button" type="submit" onClick={this.handleClick}>Add Point</button>
+                    <button className="ui button" 
+                        type="submit" 
+                        onClick={this.handleClick(post.id)}>Add a Vote</button>
                 </div>
             </div>
         
