@@ -3,8 +3,6 @@ import { fetchPosts } from '../actions/postActions';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-
-// export default class Posts extends Component {
 class Posts extends Component {
 
     state= {
